@@ -13,7 +13,7 @@ const Note = ({ data }) => {
   },[data])
 
   return (
-    <div key={id} className="w-full border-b-2 dark:border-[#8b8a98]  dark:bg-[#24273c]">
+    <div key={id} className="w-full border-b-2 dark:border-[#8b8a98] dark:border-b-[1px]  dark:bg-[#24273c]">
       <div className="h-14 rounded-md w-full pl-4 outline-0 flex items-center justify-between">
       <div
         className={` relative cursor-pointer p-4 rounded-full flex  justify-center items-center  ${data.completed ? 'bg-gradient-to-t from-fuchsia-500 to-indigo-500 dark:bg-gradient-to-t from-fuchsia-500 to-indigo-500 ' : 'border-gray-300 border dark:border-[#8b8a98]'} `} 
