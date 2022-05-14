@@ -8,7 +8,7 @@ const Layout = ({children}) => {
   const {theme} = useContext(NotesContext);
   
   return (
-    <div className={`bg-[url('./assets/bg-mobile-light.jpg')] md:bg-[url('./assets/bg-desktop-light.jpg')] dark:bg-[url('./assets/bg-mobile-dark.jpg')] md:dark:bg-[url('./assets/bg-desktop-dark.jpg')] h-screen bg-no-repeat bg-[length:100%_220px] md:w-screen md:flex-col md:items-center ${theme=== 'dark' ? 'dark dark-scheme' : ''}`}>
+    <div className={`bg-[url('./images/bg-mobile-light.jpg')] md:bg-[url('./images/bg-desktop-light.jpg')] dark:bg-[url('./images/bg-mobile-dark.jpg')] md:dark:bg-[url('./images/bg-desktop-dark.jpg')] h-screen bg-no-repeat bg-[length:100%_220px] md:w-screen md:flex-col md:items-center ${theme=== 'dark' ? 'dark dark-scheme' : ''}`}>
       <Header />
     {children}
     </div>

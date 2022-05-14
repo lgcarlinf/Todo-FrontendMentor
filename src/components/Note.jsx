@@ -21,7 +21,7 @@ const Note = ({ data }) => {
         onClick={()=>{handleComplete(id)}} 
       >
         <img
-          src="/assets/icon-check.svg"
+          src="/images/icon-check.svg"
           alt="check"
           style={{ width: "12px", height: "12px" }}
            className={`absolute ${data.completed ? 'opacity-100' : 'opacity-0'}`}
@@ -31,7 +31,7 @@ const Note = ({ data }) => {
       <p className={`  font-bold w-full text-[#8b8a98]  text-base pl-6 ${data.completed ? 'line-through' : ''} `}>{note}</p> 
         <span className="cursor-pointer" onClick={()=>{data.completed && handleEliminarNota(id)}} >
 
-        {pathname === '/' ? <img src="/assets/icon-cross.svg" alt="cross" className="mr-8"  style={{ width: "15px", height: "15px" }}/> : ''}
+        {pathname === '/' ? <img src="/images/icon-cross.svg" alt="cross" className="mr-8"  style={{ width: "15px", height: "15px" }}/> : ''}
         </span>
       </div>
       

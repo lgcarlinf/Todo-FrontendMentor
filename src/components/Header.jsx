@@ -33,7 +33,7 @@ const Header = () => {
         <h1 className="text-white text-3xl font-bold tracking-[.45em]">TODO</h1>
         <span onClick={toggleTheme} className='cursor-pointer'>
         <div
-          className="dark:bg-[url('/assets/icon-sun.svg')] bg-[url('/assets/icon-moon.svg')]"
+          className="dark:bg-[url('/images/icon-sun.svg')] bg-[url('/images/icon-moon.svg')]"
           style={{ width: "25px", height: "25px" }}
         ></div>
         
