@@ -3,7 +3,7 @@ import NotesContext from "../context/NotesProvider";
 
 const Header = () => {
   const [note, setNote] = useState("");
-  const { notes, setNotes,theme } = useContext(NotesContext);
+  const { notes, setNotes,theme,setTheme } = useContext(NotesContext);
   const id = Math.random().toString(29).slice(2);
 
   const handleSubmit = (e) => {
@@ -11,25 +11,14 @@ const Header = () => {
     if(note.trim() === ""){
       return
     }
-    
+
     setNotes([...notes, { id, note, completed: false }]);
     setNote("");
   };
 
   const toggleTheme = () => {
-    const theme = localStorage.getItem("theme"); 
-    if (theme === "dark") {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
+    setTheme(theme === "light" ? "dark" : "light");
   };
-
-  useEffect(()=>{
-    toggleTheme();
-  },[])
 
   return (
     <div className=" flex flex-col p-6 pt-10 sm:w-4/5 sm:m-auto sm:px-0 md:w-3/5 md:m-auto md:px-0 lg:w-1/2 lg:px-0 ">
