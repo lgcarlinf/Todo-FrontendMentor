@@ -8,6 +8,10 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(note.trim() === ""){
+      return
+    }
+    
     setNotes([...notes, { id, note, completed: false }]);
     setNote("");
   };
@@ -43,7 +47,7 @@ const Header = () => {
         <div className="w-full relative">
           <input
             type="text"
-            className="h-12  mt-9 rounded-md w-full pl-16 outline-0 dark:bg-[#24273c]"
+            className="h-12  mt-9 rounded-md w-full pl-16 outline-0 bg-slate-50  dark:bg-[#24273c]"
             placeholder="Create a new todo..."
             value={note}
             onChange={(e) => setNote(e.target.value)}

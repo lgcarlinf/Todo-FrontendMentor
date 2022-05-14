@@ -1,6 +1,8 @@
 import React,{useContext, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import NotesContext from "../context/NotesProvider";
+import cross from "../images/icon-cross.svg";
+import check from '../images/icon-check.svg';
 
 const Note = ({ data }) => {
   const { id, note } = data;
@@ -21,7 +23,7 @@ const Note = ({ data }) => {
         onClick={()=>{handleComplete(id)}} 
       >
         <img
-          src="./images/icon-check.svg"
+          src={check}
           alt="check"
           style={{ width: "12px", height: "12px" }}
            className={`absolute ${data.completed ? 'opacity-100' : 'opacity-0'}`}
@@ -31,7 +33,7 @@ const Note = ({ data }) => {
       <p className={`  font-bold w-full text-[#8b8a98]  text-base pl-6 ${data.completed ? 'line-through' : ''} `}>{note}</p> 
         <span className="cursor-pointer" onClick={()=>{data.completed && handleEliminarNota(id)}} >
 
-        {pathname === '/' ? <img src="./images/icon-cross.svg" alt="cross" className="mr-8"  style={{ width: "15px", height: "15px" }}/> : ''}
+        {pathname === '/' ? <img src={cross} alt="cross" className="mr-8"  style={{ width: "15px", height: "15px" }}/> : ''}
         </span>
       </div>
       

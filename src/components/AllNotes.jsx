@@ -37,7 +37,7 @@ const AllNotes = () => {
   }
 
   return (
-    <div className=" mx-6 pb-8 sm:w-4/5 sm:m-auto md:w-3/5 md:m-auto lg:w-1/2 ">
+    <div className=" mx-6 pb-8 sm:w-4/5 sm:m-auto md:w-3/5 md:m-auto lg:w-1/2 z-10 ">
       <div className=" h-auto rounded-md bg-white shadow-xl dark:bg-[#181824] ">
           {allNotes && allNotes.map((note) => (
             
