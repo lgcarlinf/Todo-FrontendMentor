@@ -1,10 +1,10 @@
 import { useContext} from "react";
 import Header from "../components/Header";
 import NotesContext from "../context/NotesProvider";
-import desktopLight from  "../images/bg-desktop-light.jpg";
-import desktopDark from  "../images/bg-desktop-dark.jpg";
-import mobileDark from  "../images/bg-mobile-dark.jpg";
-import mobileLight from  "../images/bg-mobile-light.jpg";
+import desktopLight from  "./images/bg-desktop-light.jpg";
+import desktopDark from  "./images/bg-desktop-dark.jpg";
+import mobileDark from  "./images/bg-mobile-dark.jpg";
+import mobileLight from  "./images/bg-mobile-light.jpg";
 
 const Layout = ({children}) => {
  
