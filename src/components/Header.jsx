@@ -33,7 +33,7 @@ const Header = () => {
         <h1 className="text-white text-3xl font-bold tracking-[.45em]">TODO</h1>
         <span onClick={toggleTheme} className='cursor-pointer'>
         <div
-          className="dark:bg-[url('/images/icon-sun.svg')] bg-[url('/images/icon-moon.svg')]"
+          className="dark:bg-[url('./images/icon-sun.svg')] bg-[url('./images/icon-moon.svg')]"
           style={{ width: "25px", height: "25px" }}
         ></div>
         
@@ -52,11 +52,7 @@ const Header = () => {
             className="absolute border-gray-300 dark:border-[#8b8a98] border rounded-full flex justify-center items-center top-12 left-4 z-10   " /* bg-gradient-to-t from-fuchsia-500 to-indigo-500 */
             style={{ width: "25px", height: "25px" }}
           >
-         {/*    <img
-              src="/assets/icon-check.svg"
-              alt="check"
-              style={{ width: "12px", height: "12px" }}
-            /> */}
+    
           </div>
         </div>
       </form>

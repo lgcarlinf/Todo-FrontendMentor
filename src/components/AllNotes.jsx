@@ -1,5 +1,5 @@
 
-import { data } from "autoprefixer";
+
 import { useContext,useState ,useEffect} from "react";
 import { useLocation, Link } from "react-router-dom";
 import NotesContext from "../context/NotesProvider";
